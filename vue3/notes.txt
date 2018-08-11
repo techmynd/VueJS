@@ -1,0 +1,51 @@
+new cli - 3
+-------------
+> npm install -g @vue/cli
+
+for old cli use 
+-----------------
+npm install -g vue/cli
+
+--------------------------
+
+
+> vue create project-name
+or
+> vue create folder-name
+or
+> vue create vue-cli-new
+
+after that > select features and use spacebar or type * in what u need
+
+run the project
+===============
+
+go to the folder and run it
+> cd vue-project-name
+
+> npm run serve
+
+  App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.1.11:8080/
+
+
+dont copy assets in public directory otherwise those will not be optimized by webpack
+Copy assets in src/assets directory so that those can be optimized
+
+
+change port >> run another command
+
+> npm run serve -- --port 3000
+
+  App running at:
+  - Local:   http://localhost:3000/
+  - Network: http://192.168.1.11:3000/
+
+
+
+
+
+
+
+

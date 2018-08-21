@@ -24,23 +24,23 @@
     <div class="row">
       <div class="col-md-12">
 
-        <h3>Simple VueJS</h3>
+        <h3>Data Binding</h3>
         
         <br>
         <br>
 
-        <textarea class="form-control" rows="10">
-<div id="vueApp">
-{{ message }}
-{{ anotherMessage }}
-</div>
+<textarea class="form-control" rows="10">
+<a v-bind:href="url">{{url}}</a> 
+or <a :href="url">{{url}}</a>
 
-<script>
-new Vue({
+<div v-bind:data-dynamicid="dynamicID">{{dynamicID}}</div>
+
+<script> 
+ new Vue({
   el: '#vueApp',
   data: {
-    message: "Hello",
-    anotherMessage: "Hello Again"
+    url: 'http://msn.com',
+    dynamicID: 30
   }
 });
 </script>
@@ -58,15 +58,21 @@ new Vue({
     <div class="row">
       <div class="col-md-12">
         
-      {{ message }}
-
+      Bind var to link: <a v-bind:href="url">{{url}}</a> 
+      <br>
+      or <a :href="url">{{url}}</a>
       <br>
 
-      {{ anotherMessage }}
-
+      v-bind:href="url"
       <br>
+      :href="url"
 
-      Addition: {{ number + 20 }}
+      <br><br>
+
+      <div v-bind:data-dynamicid="dynamicID">{{dynamicID}}</div>
+      v-bind:data-dynamicid="dynamicID"
+      <br>
+      See source for this element
   
       </div>
     </div>
@@ -77,12 +83,11 @@ new Vue({
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
 
-    new Vue({
+     new Vue({
       el: '#vueApp',
       data: {
-        message: "Hello",
-        anotherMessage: "Hello Again",
-        number: 10
+        url: 'http://msn.com',
+        dynamicID: 30
       }
     });
 

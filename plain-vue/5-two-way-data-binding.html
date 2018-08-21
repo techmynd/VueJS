@@ -24,24 +24,26 @@
     <div class="row">
       <div class="col-md-12">
 
-        <h3>Simple VueJS</h3>
+        <h3>Two Way Data Binding / Directives / v-model</h3>
         
         <br>
         <br>
 
-        <textarea class="form-control" rows="10">
-<div id="vueApp">
-{{ message }}
-{{ anotherMessage }}
+<textarea class="form-control" rows="10">
+<p>Your selected options: {{options.join(', ')}}</p>
+<input class="form-control" v-model="options">
+<div class="checkbox">
+  <label>
+    <input type="checkbox" name="option1" v-model="options" value="Option 1"> Option 1
+  </label>
 </div>
 
-<script>
+<script> 
 new Vue({
-  el: '#vueApp',
-  data: {
-    message: "Hello",
-    anotherMessage: "Hello Again"
-  }
+el: '#vueApp',
+data: {
+  options: []
+}
 });
 </script>
         </textarea>
@@ -58,15 +60,27 @@ new Vue({
     <div class="row">
       <div class="col-md-12">
         
-      {{ message }}
+        <input class="form-control" v-model="options" readonly="">
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="option1" v-model="options" value="Option 1"> Option 1
+          </label>
+        </div>
 
-      <br>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="option2" v-model="options" value="Option 2"> Option 2
+          </label>
+        </div>
 
-      {{ anotherMessage }}
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="option3" v-model="options" value="Option 3"> Option 3
+          </label>
+        </div>
 
-      <br>
-
-      Addition: {{ number + 20 }}
+        <p>Your selected options: {{options.join(', ')}}</p>
   
       </div>
     </div>
@@ -77,12 +91,10 @@ new Vue({
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
 
-    new Vue({
+     new Vue({
       el: '#vueApp',
       data: {
-        message: "Hello",
-        anotherMessage: "Hello Again",
-        number: 10
+        options: []
       }
     });
 

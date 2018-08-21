@@ -24,23 +24,19 @@
     <div class="row">
       <div class="col-md-12">
 
-        <h3>Simple VueJS</h3>
+        <h3>String Interpolation/Insertion</h3>
         
         <br>
         <br>
 
-        <textarea class="form-control" rows="10">
-<div id="vueApp">
-{{ message }}
-{{ anotherMessage }}
-</div>
-
-<script>
-new Vue({
+<textarea class="form-control" rows="10">
+let justAName = new Vue({
   el: '#vueApp',
   data: {
     message: "Hello",
-    anotherMessage: "Hello Again"
+    anotherMessage: "Hello Again",
+    number: 10,
+    isActive: true
   }
 });
 </script>
@@ -58,15 +54,17 @@ new Vue({
     <div class="row">
       <div class="col-md-12">
         
-      {{ message }}
-
+      Message: {{ message }}
       <br>
-
-      {{ anotherMessage }}
-
+      Reverse Message (message.split.reverse.join): {{ message.split('').reverse('').join('') }}
       <br>
-
+      Another Message {{ anotherMessage }}
+      <br>
       Addition: {{ number + 20 }}
+      <br>
+      Boolean Check (true or false): {{ isActive ? 'its active' : 'its not active' }}
+      <br>
+      Type justAName.message='some other text' and hit enter to see message value change
   
       </div>
     </div>
@@ -77,12 +75,13 @@ new Vue({
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
 
-    new Vue({
+    let justAName = new Vue({
       el: '#vueApp',
       data: {
         message: "Hello",
         anotherMessage: "Hello Again",
-        number: 10
+        number: 10,
+        isActive: true
       }
     });
 

@@ -24,23 +24,27 @@
     <div class="row">
       <div class="col-md-12">
 
-        <h3>Simple VueJS</h3>
+        <h3>Directives / Modifiers for Directives</h3>
+        <p>v-on:click="" / @click="" / @submit.prevent</p>
         
         <br>
         <br>
 
-        <textarea class="form-control" rows="10">
-<div id="vueApp">
-{{ message }}
-{{ anotherMessage }}
-</div>
+<textarea class="form-control" rows="10">
+{{someNumber}}
 
-<script>
+<button v-on:click="someNumber++">INCREASE</button>
+<button @click="someNumber--">DECREASE</button>
+
+<form action="" @submit.prevent="someNumber++">
+ <button type="submit">SUBMIT & INCREMENT</button>
+</form>
+
+<script> 
 new Vue({
   el: '#vueApp',
   data: {
-    message: "Hello",
-    anotherMessage: "Hello Again"
+    someNumber: 30
   }
 });
 </script>
@@ -58,15 +62,18 @@ new Vue({
     <div class="row">
       <div class="col-md-12">
         
-      {{ message }}
+       {{someNumber}}
 
-      <br>
+       <br>
 
-      {{ anotherMessage }}
+       <button v-on:click="someNumber++">INCREASE</button>
+       <button @click="someNumber--">DECREASE</button>
 
-      <br>
+       <br><br>
 
-      Addition: {{ number + 20 }}
+       <form action="" @submit.prevent="someNumber++">
+         <button type="submit">SUBMIT & INCREMENT</button>
+       </form>
   
       </div>
     </div>
@@ -77,12 +84,10 @@ new Vue({
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
 
-    new Vue({
+     new Vue({
       el: '#vueApp',
       data: {
-        message: "Hello",
-        anotherMessage: "Hello Again",
-        number: 10
+        someNumber: 30
       }
     });
 

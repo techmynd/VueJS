@@ -24,24 +24,21 @@
     <div class="row">
       <div class="col-md-12">
 
-        <h3>Simple VueJS</h3>
+        <h3>Two Way Data Binding / Directives / v-model</h3>
         
         <br>
         <br>
 
-        <textarea class="form-control" rows="10">
-<div id="vueApp">
-{{ message }}
-{{ anotherMessage }}
-</div>
+<textarea class="form-control" rows="10">
+<input class="form-control" v-model="yourname" placeholder="Type Your Name">
+{{yourname}}
 
-<script>
+<script> 
 new Vue({
-  el: '#vueApp',
-  data: {
-    message: "Hello",
-    anotherMessage: "Hello Again"
-  }
+el: '#vueApp',
+data: {
+  yourname:''
+}
 });
 </script>
         </textarea>
@@ -58,15 +55,8 @@ new Vue({
     <div class="row">
       <div class="col-md-12">
         
-      {{ message }}
-
-      <br>
-
-      {{ anotherMessage }}
-
-      <br>
-
-      Addition: {{ number + 20 }}
+        <input class="form-control" v-model="yourname" placeholder="Type Your Name">
+        {{yourname}}
   
       </div>
     </div>
@@ -77,12 +67,10 @@ new Vue({
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
 
-    new Vue({
+     new Vue({
       el: '#vueApp',
       data: {
-        message: "Hello",
-        anotherMessage: "Hello Again",
-        number: 10
+        yourname:''
       }
     });
 

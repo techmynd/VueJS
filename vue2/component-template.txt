@@ -1,0 +1,11 @@
+Vue Component/template
+=======================
+<template>
+</template>
+
+<script>
+</script>
+
+<style>
+</style>
+

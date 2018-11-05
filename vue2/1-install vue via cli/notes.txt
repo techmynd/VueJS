@@ -1,0 +1,9 @@
+3- install via CLI
+===================
+
+> npm install -g @vue/cli
+cli enables you to create vue app by using command below
+> vue create vue-project
+after that go to poject folder
+> cd vue-project
+> npm run serve

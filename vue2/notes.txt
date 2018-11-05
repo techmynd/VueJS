@@ -1,0 +1,37 @@
+1- Link vue2 via CDN
+=====================
+
+or
+
+2- install vuejs2 via node
+=======================
+
+> npm install vue --save
+use it like
+<script src="node_modules/vue/dist/vue.js"></script>
+
+or
+
+3- install via CLI
+===================
+
+> npm install -g @vue/cli
+cli enables you to create vue app by using command below
+> vue create vue-project
+after that go to poject folder
+> cd vue-project
+> npm run serve
+
+
+Vue Component/template
+=======================
+<template>
+</template>
+
+<script>
+</script>
+
+<style>
+</style>
+
+

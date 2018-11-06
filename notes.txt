@@ -1,0 +1,16 @@
+vuejs meta
+==========
+https://github.com/daliborgogic/vuejs-ssr-meta
+https://github.com/declandewet/vue-meta
+https://www.npmjs.com/package/vue-head
+https://alligator.io/vuejs/vue-router-modify-head/
+
+vuejs templates
+================
+https://github.com/vuejs-templates
+
+vuejs routing
+==============
+https://github.com/chrisvfritz/vue-2.0-simple-routing-example/tree/pagejs
+https://github.com/flatiron/director
+https://github.com/visionmedia/page.js

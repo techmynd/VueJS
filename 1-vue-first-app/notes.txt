@@ -1,0 +1,63 @@
+installation / new app via @vue/cli
+===================================
+
+> yarn global add @vue/cli
+or
+> npm install -g @vue/cli
+
+> vue create project-name
+
+> yarn serve
+
+http://localhost:8081/
+
+
+routes
+======
+http://localhost:8080/
+http://localhost:8080/#/
+http://localhost:8080/#/about
+
+this is not a route - this is just a url that shows a dynamic name
+http://localhost:8080/#/about/javed
+
+
+
+
+Now edit files
+============
+- template
+- logic
+- styling
+
+app.vue
+
+<template>
+
+</template>
+
+<script>
+
+</script>
+
+<style scoped>
+
+</style>
+
+scoped > is for component based css - dont use scoped for global css
+
+or
+
+<style src="./Skills.css" scoped>
+</style>
+
+============
+
+app example
+===========
+https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example
+https://coursetro.com/posts/code/136/Vue-CSS-Tutorial---Class-and-Style-Binding
+
+
+
+

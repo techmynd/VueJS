@@ -1,0 +1,89 @@
+// see 1-vue declarations for declarations for this page
+
+<div id="vueApp"> ... </div>
+
+
+<button @click="decreaseSize">Decrease</button>
+<p :style="{fontSize: fontSizeee+'px'}">some text</p>
+
+
+<div id="vueApp"> 
+	{{ title }}
+</div>
+
+
+<!--v-on / onclick Directive / click is argument-->
+<button v-on:click=" title='New Title' ">Change Title</button>
+
+
+
+<!-- v-on / method -->
+<button v-on:click="changeTitle">Change Title</button>
+or
+@click="changeTitle"
+
+
+
+<input v-on:input="cssClass= $event.target.value" type="text">
+<p class="cssClass">{{ cssClass }}</p>
+
+In this case cssClass text will be changed but class='cssClass' wont be affected
+To change class we have to bind the class in html
+
+
+Bind
+<input v-on:input="cssClass= $event.target.value" type="text" class="form-control">
+<p v-bind:class="cssClass">{{ cssClass }}</p>
+
+
+Click / increment  decrement
+<button v-on:click="increment">+</button>
+<button v-on:click="Decrement">-</button>
+Counter: {{ counter }}
+Clicks: {{ clicks }}
+
+
+
+
+
+class true false
+================
+<div v-bind:class="{ class-name: !showAlert }"></div>
+data: {
+	showAlert: true
+	// showAlert: false
+}
+
+
+
+
+multiple classes
+==================
+<div v-bind:class="{ class-name: showAlert, 'another-class-name': showClass }"></div>
+
+<style>
+.class-name {background-color: yellow;}
+.another-class-name {border: 2px solid #000;}
+</style>
+
+
+
+
+style bind
+============
+
+<div v-bind:style="{ backgroundColor: setBgColor, width: setBgWidth, height: setBgHeight }"></div>
+data: {
+	setBgColor: 'yellow',
+	setBgWidth: '100%',
+	setBgHeight: 30px
+}
+
+
+
+
+
+
+
+
+

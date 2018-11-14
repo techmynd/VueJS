@@ -1,0 +1,148 @@
+var vueObj = new Vue({
+	el: '#vueApp',
+	
+	data: {
+		title: 'Hello Vue',
+		cssClass: ''
+		counter: 0,
+		clicks: 0
+	},
+
+	// methods
+	
+	methods: {
+	
+		changeTitle(){
+			// use this
+			this.title = "Change Title Again";
+		},
+
+		increment(){
+			this.clicks++;
+			this.counter = this.clicks + 1;
+		},
+
+		decrement(){
+			this.clicks--;
+			this.counter = this.clicks - 1;
+		}
+
+	},
+
+	computed: {
+		counter(){
+			return	this.clicks + 1;
+		}
+	}
+
+
+}); // VueObj ends
+
+vueObj.title = "Hellow new title";
+
+
+
+
+
+========================================================================
+data(){
+	return {
+	  name: 'TechMynd',
+	  btnState: true
+	}
+}
+
+{{ name }}
+<br>  
+{{ btnState ? 'Button Disabled' : 'Button Enabled' }}
+<br>
+<button v-on:click="changeName" v-bind:disabled="btnState">Change Name</button>
+=============================================================================
+
+
+
+
+
+API
+===
+https://vuejs.org/v2/api/
+
+Options / DOM
+==============
+el
+template
+render
+renderError
+
+Options / Data
+==============
+data
+props
+propsData
+computed
+methods
+watch
+
+Options / Assets
+================
+directives
+filters
+components
+
+Options / Composition
+=====================
+parent
+mixins
+extends
+provide / inject
+
+Options / Lifecycle Hooks
+========================
+beforeCreate
+created
+beforeMount
+mounted
+beforeUpdate
+updated
+activated
+deactivated
+beforeDestroy
+destroyed
+errorCaptured
+
+There are other options
+Options / Misc
+
+Directives
+==========
+v-text
+v-html
+v-show
+v-if
+v-else
+v-else-if
+v-for
+v-on
+v-bind
+v-model
+v-pre
+v-cloak
+v-once
+
+Special Attributes
+==================
+key
+ref
+slot
+slot-scope
+scope
+is
+
+Built-In Components
+===================
+component
+transition
+transition-group
+keep-alive
+slot
+

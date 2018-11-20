@@ -11,6 +11,12 @@
 	{{ title }}
 </div>
 
+or
+
+<div id="vueApp"> 
+	{{ sayHello() }}
+</div>
+
 
 <!--v-on / onclick Directive / click is argument-->
 <button v-on:click=" title='New Title' ">Change Title</button>
@@ -79,11 +85,26 @@ data: {
 	setBgHeight: 30px
 }
 
+BIND
+=====
+
+{{ link }}
+vs
+v-bind:href="link"
 
 
 
 
 
 
+fiddles
+=======
+displaying data + multiplication + data bind to input + random number
+https://jsfiddle.net/smax/cgagqn89/
+
+Event Modifiers
+https://vuejs.org/v2/guide/events.html#Event-Modifiers
+Key odifiers
+https://vuejs.org/v2/guide/events.html#Key-Modifiers
 
 

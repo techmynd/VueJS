@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>VueJS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    
+    <style>
+     
+    </style>
+
+</head>
+
+<body>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <h3>Data Binding - Get X / Y on mousemove over container</h3>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <br>
+  <br>
+
+  <div class="container" id="vueApp" v-on:mousemove="updateCoordinates" style="background-color: #eee;">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <p >Coordinates: x: {{ x }} / y: {{ y }}</p>
+  
+      </div>
+    </div>
+  </div>  
+
+  <br><br>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+
+     new Vue({
+      el: '#vueApp',
+      data: {
+        x: 0,
+        y: 0
+      },
+      methods: {
+        updateCoordinates: function(event) {
+          this.x = event.clientX;
+          this.y = event.clientY;
+        }      
+      }
+    });
+
+  </script>
+
+</body>
+</html>

@@ -116,18 +116,22 @@ Options / Misc
 Directives
 ==========
 v-text
-v-html
+v-html <p v-html="htmlCode"></p>
 v-show
 v-if
 v-else
 v-else-if
 v-for
-v-on
+
+v-on 
+<button v-on:click="vue_func_click_clickMe">Click me</button>
+<button v-on:mousemove="vue_func_updateCoordinates">Click me</button>
+
 v-bind
 v-model
 v-pre
 v-cloak
-v-once
+v-once <p v-once>{{ title }}</p>
 
 Special Attributes
 ==================
@@ -145,4 +149,19 @@ transition
 transition-group
 keep-alive
 slot
+
+
+Easy Access
+============
+
+data: {
+	title: 'Hello Vue'
+},
+methods: {
+	sayHello: function() {
+	return this.title;
+},
+>> access {{ sayHello() }}
+
+
 

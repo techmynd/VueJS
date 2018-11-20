@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>VueJS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    
+    <style>
+     
+    </style>
+
+</head>
+
+<body>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <h3>Form submit</h3>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <br>
+  <br>
+
+  <div class="container" id="vueApp">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <input type="text" name="" v-on:keyup.enter="submitForm" v-on:input="fieldValue=$event.target.value">
+        <button v-on:click="submitForm">Click me or hit ENTER</button>
+        <br>
+        {{ fieldValue }}
+  
+      </div>
+    </div>
+  </div>  
+
+  <br><br>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+
+     new Vue({
+      el: '#vueApp',
+      data: {
+        fieldValue: ''
+      },
+      methods: {
+        submitForm: function(event) {
+          x = this.fieldValue;
+          alert(x);
+        }      
+      }
+    });
+
+  </script>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
     "buble": "0.19.x",
     "markdown-it-custom-block": "0.1.x",
     "prettier": "1.13.x",
-    "prismjs": "1.14.x",
+    "prismjs": "1.21.x",
     "strip-indent": "2.0.x",
     "vuepress": "0.10.x"
   },
